@@ -2,6 +2,7 @@ import os
 import shutil
 
 from textnode import TextNode
+from generate_page import generate_page
 
 
 def copy_files_recursive(source_dir_path, dest_dir_path):
@@ -19,13 +20,10 @@ def copy_files_recursive(source_dir_path, dest_dir_path):
 
 
 def main():
-    text = TextNode("Test Node Baby", "bold", "https://www.google.com")
 
     if os.path.exists("public"):
         shutil.rmtree("public")
     files = copy_files_recursive("static", "public")
-
-    print(files)
-
+    generate_page("content/index.md", "template.html", "public/index.html")
 
 main()

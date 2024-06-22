@@ -30,7 +30,7 @@ def text_node_to_html_node(text_node):
         return LeafNode(None, text_node.text)
     if text_node.text_type == text_type_bold:
         return LeafNode("b", text_node.text)
-    if text_node.text_type == text_type_italic:
+    if text_node.text_type == text_type_italic: 
         return LeafNode("i", text_node.text)
     if text_node.text_type == text_type_code:
         return LeafNode("code", text_node.text)

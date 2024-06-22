@@ -63,7 +63,6 @@ def block_to_block_type(text):
     ordered_flag = False
     for i in range(len(split_text)):
         current = split_text[i][0:3]
-        print(current)
         if current == f"{i+1}. ":
             ordered_flag = True
         else:
